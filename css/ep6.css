@@ -1,0 +1,202 @@
+/* EP6 · 삼킴장애 */
+.e6-layout{position:absolute;left:74px;right:74px;top:145px;height:565px;display:grid;grid-template-columns:900px 1fr;gap:20px}
+.e6-anat,.e6-side,.e6-term{border-radius:22px;backdrop-filter:blur(12px);background:linear-gradient(145deg,rgba(21,34,64,.94),rgba(9,15,31,.92));border:1px solid rgba(160,190,255,.22);box-shadow:0 18px 45px rgba(0,0,0,.35);position:relative;overflow:hidden}
+.e6-anat{padding:12px 16px}.e6-anat-head{height:34px;display:flex;align-items:center;justify-content:space-between;color:#EDF3FF;font-size:18px}.e6-anat-head span{color:#9EAED0;font-size:14px}.e6-svg{width:100%;height:490px;display:block}.e6-label{font:700 15px sans-serif;fill:#E9F0FF;paint-order:stroke;stroke:#111B34;stroke-width:3px;stroke-linejoin:round}.e6-note{font:800 17px sans-serif;fill:#7DD7FF}.e6-call{fill:none;stroke:#8AA2CC;stroke-width:2;opacity:.7}.e6-protect{opacity:0;transition:opacity .4s}.e6-protect.on{opacity:1}.e6-bolus{transition:cx 1s ease,cy 1s ease,fill .2s;stroke:#FFF1B3}.e6-b-0{cx:354px;cy:225px}.e6-b-1{cx:457px;cy:246px}.e6-b-2{cx:497px;cy:311px}.e6-b-3{cx:548px;cy:359px}.e6-b-4{cx:559px;cy:417px}.e6-b-5{cx:582px;cy:480px}.e6-bolus.penetrate{fill:#FF9C52;stroke:#FFDD82;filter:url(#e6-glow)}.e6-bolus.aspirate{fill:#FF425F;stroke:#FF9AA7;filter:url(#e6-glow)}.e6-anat.e6-xray:after{content:'VFSS · 투시';position:absolute;right:24px;top:54px;color:#BDEBFF;font-weight:900;letter-spacing:.12em;text-shadow:0 0 18px #48A8FF}.e6-anat.e6-xray .e6-svg{filter:drop-shadow(0 0 7px rgba(70,174,255,.3))}.e6-anat.e6-fees:after{content:'FEES · 내시경 시야';position:absolute;right:24px;top:54px;color:#9CFFE1;font-weight:900;letter-spacing:.08em}
+.e6-side{padding:18px 18px 12px}.e6-status{font-size:18px;font-weight:900;color:#fff;background:rgba(127,178,255,.13);border-left:4px solid #7FB2FF;padding:10px 12px;border-radius:8px;margin-bottom:14px}.e6-phase{height:54px;display:grid;grid-template-columns:34px 1fr;grid-template-rows:25px 20px;align-items:center;padding:3px 8px;margin:4px 0;border-radius:12px;color:#AAB8D2;border:1px solid transparent;transition:.35s}.e6-phase i{grid-row:1/3;width:27px;height:27px;border-radius:50%;font-style:normal;text-align:center;line-height:27px;background:rgba(255,255,255,.09);font-weight:900}.e6-phase span{font-size:18px;font-weight:900}.e6-phase small{font-size:13px;color:#8999B8}.e6-phase.hot{color:#fff;background:linear-gradient(90deg,rgba(71,210,173,.20),rgba(71,210,173,.04));border-color:rgba(71,210,173,.55)}.e6-phase.hot i{background:#42CDA6;color:#091C25}.e6-minihead{font-size:20px;font-weight:900;color:#8ADFCB;margin:15px 0 8px}.e6-cn{display:grid;gap:7px}.e6-cn>div{display:grid;grid-template-columns:145px 1fr;align-items:center;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.055)}.e6-cn b{color:#C5D7FF;font-size:16px}.e6-cn span{font-size:14px;color:#C6D1E6}.e6-panel{font-size:16px;line-height:1.45;color:#E4EBFA;animation:e6-in .4s ease}.e6-panel h3{margin:5px 0 8px;color:#8ADFCB;font-size:20px}.e6-panel p{margin:6px 0;color:#F2F5FF}.e6-panel small{display:block;color:#AAB8D2;font-size:13px;line-height:1.5;margin-top:6px}.e6-warning{margin-top:10px;padding:8px 10px;background:rgba(255,176,71,.12);color:#FFD492;border-radius:8px;font-size:13px}.e6-danger{color:#FF8D9C}.e6-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.e6-two>div{border-radius:12px;padding:10px;background:rgba(255,255,255,.06)}.e6-two strong{color:#B7D0FF;font-size:17px}.e6-two p{font-size:14px;line-height:1.35}.e6-term{position:absolute;left:140px;right:140px;top:500px;min-height:100px;padding:15px 24px;display:none;z-index:12}.e6-term.on{display:block;animation:e6-in .3s ease}.e6-terms-title{font-weight:900;font-size:20px;color:#C5D7FF;margin-bottom:8px}.e6-def{display:inline-grid;min-width:42%;margin:4px 16px 0 0;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.06);vertical-align:top}.e6-def b{font-size:17px;color:#FFF}.e6-def span{font-size:14px;color:#BFCBE2;margin-top:3px}.e6-def.pen{border:1px solid rgba(255,177,90,.45)}.e6-def.asp{border:1px solid rgba(255,79,105,.5)}.e6-summary{padding-left:24px;margin:6px 0;display:grid;grid-template-columns:1fr 1fr;gap:5px 26px;color:#DDE7FF;font-size:15px;font-weight:700}.e6-summary li{padding:4px 0}.e6-layout #e6-cards{margin-top:15px}.e6-panel{min-height:200px}.e6-phase:last-of-type{margin-bottom:8px}@keyframes e6-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* Exam-focused transitions and strategy selection */
+.e6-transition{display:flex;align-items:center;justify-content:space-between;gap:5px;margin:13px 0;padding:10px 8px;border-radius:12px;background:rgba(90,150,255,.08)}.e6-transition>span{display:flex;flex-direction:column;align-items:center;text-align:center;color:#DCE8FF;font-size:14px;font-weight:900}.e6-transition small{max-width:112px;color:#9EAFD0;font-size:11px;font-weight:500;line-height:1.3;margin-top:5px}.e6-transition i{color:#65C7FF;font-style:normal;font-size:18px}.e6-select{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}.e6-select>div{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;flex-direction:column;gap:4px}.e6-select b{color:#B7D0FF;font-size:14px}.e6-select span{color:#DCE5F7;font-size:13px}
+
+/* Face-first swallowing illustration with animated bolus and residue markers */
+.e6-face-scene{position:relative;width:100%;height:490px;overflow:hidden;border-radius:14px;background:#0A1020}
+.e6-face-img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.e6-face-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.e6-food-route{fill:none;stroke:#69E2D1;stroke-width:11;stroke-linecap:round;stroke-dasharray:20 20;opacity:.64;filter:drop-shadow(0 0 8px #49CBB6);animation:e6-route-flow 1.2s linear infinite}
+.e6-journey-bolus{transition:cx .95s cubic-bezier(.2,.7,.2,1),cy .95s cubic-bezier(.2,.7,.2,1);stroke:#FFF3B1;stroke-width:7}
+.e6-journey-bolus.penetrate{fill:#FF9C52;stroke:#FFE19A}
+.e6-journey-bolus.aspirate{fill:#FF425F;stroke:#FFC3CD}
+.e6-face-anat-label path{fill:none;stroke:#B8D8FF;stroke-width:5;opacity:.9}
+.e6-face-anat-label rect{fill:#0B1730E8;stroke:#8DB8F4;stroke-width:4}
+.e6-face-anat-label text{font:900 42px sans-serif;fill:#F3F7FF;paint-order:stroke;stroke:#0A1020;stroke-width:4px}
+.e6-face-protect{opacity:0;transition:opacity .4s}
+.e6-face-protect.on{opacity:1}
+.e6-face-note{font:900 34px sans-serif;fill:#F2F8FF}
+.e6-face-small{font:700 25px sans-serif;fill:#D6E1F8}
+.e6-face-residue{display:none}
+.e6-face-residue.on{display:block}
+.e6-face-residue circle{fill:#FF596E;stroke:#FFD4D9;stroke-width:8;filter:drop-shadow(0 0 14px #FF4D68);animation:e6-res-pulse 1.1s ease-in-out infinite alternate}
+#e6-res-pyriform rect{fill:#0B1426E8;stroke:#7FB2FF;stroke-width:5}
+#e6-res-pyriform path{fill:none;stroke:#F4778E;stroke-width:20;stroke-linecap:round}
+#e6-res-pyriform text{font:900 34px sans-serif;fill:#F2F8FF}
+.e6-face-tag{position:absolute;left:15px;bottom:12px;padding:7px 11px;border-radius:10px;background:rgba(7,15,32,.82);border:1px solid rgba(135,185,255,.38);color:#DCEBFF;font-size:14px;font-weight:900;letter-spacing:.02em}
+.e6-residue-list{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:8px 0}
+.e6-residue-list span{display:flex;align-items:center;gap:7px;border-radius:9px;padding:6px 8px;background:rgba(255,255,255,.06);font-size:13px}
+.e6-residue-list i{flex:none;width:22px;height:22px;border-radius:50%;display:inline-grid;place-items:center;background:#FF687C;color:#1A1020;font-style:normal;font-weight:1000}
+.e6-residue-list b{font-size:13px;color:#F2F5FF}
+@keyframes e6-route-flow{to{stroke-dashoffset:-40}}
+@keyframes e6-res-pulse{from{opacity:.72;transform:scale(.91);transform-origin:center}to{opacity:1;transform:scale(1.08);transform-origin:center}}
+
+/* R3: one focal canvas; hide the persistent face and checklist unless a stage is being explained. */
+.e6-layout{left:80px;right:80px;top:142px;height:565px;display:block}
+.e6-anat{display:none}
+.e6-side{position:absolute;inset:0;padding:24px 30px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,rgba(17,30,57,.98),rgba(7,13,28,.98));}
+.e6-phase{display:none!important}
+.e6-status{font-size:24px;padding:14px 18px;margin:0 0 18px}
+.e6-layout #e6-cards{margin:0;max-width:100%;}
+.e6-panel{font-size:24px;line-height:1.48;min-height:0;padding:10px 8px}
+.e6-panel h3{font-size:28px}
+.e6-panel p{font-size:24px}
+.e6-panel small{font-size:20px;color:#c3d0e8}
+.e6-minihead{font-size:27px}
+.e6-cn>div{padding:13px 16px}.e6-cn b,.e6-cn span{font-size:21px}
+.e6-warning{font-size:20px;padding:12px 16px}
+.e6-two strong{font-size:23px}.e6-two p{font-size:20px}
+.e6-select b,.e6-select span{font-size:20px}
+.e6-transition>span{font-size:20px}.e6-transition small{font-size:17px;max-width:150px}
+.e6-residue-list{gap:12px}.e6-residue-list span{font-size:20px;padding:12px}.e6-residue-list b{font-size:20px}
+.e6-side{align-items:center;padding:30px 42px}
+.e6-phase{display:none}
+.e6-status{width:100%;max-width:1220px;font-size:24px;padding:14px 18px;margin:0 auto 20px}
+.e6-layout #e6-cards{width:100%;max-width:1220px;margin:0 auto}
+.e6-panel{font-size:24px;line-height:1.55}
+.e6-panel h3{font-size:34px;line-height:1.25}
+.e6-panel p{font-size:28px;line-height:1.45}
+.e6-panel small{font-size:22px;line-height:1.5}
+.e6-anatomy-mode .e6-side{left:0;right:calc(31% + 20px);padding:26px 38px;}
+.e6-anatomy-mode .e6-status{display:none}
+.e6-anatomy-mode .e6-layout #e6-cards{width:100%;max-width:100%}
+.e6-anatomy-mode .e6-anat{display:block;position:absolute;left:auto;right:0;top:0;bottom:0;width:31%;padding:12px}
+.e6-anatomy-mode .e6-anat-head{height:auto;display:block;font-size:18px;line-height:1.3;margin-bottom:8px}.e6-anatomy-mode .e6-anat-head span{display:block;font-size:14px;line-height:1.3;margin-top:4px}
+.e6-anatomy-mode .e6-face-scene{height:260px}
+.e6-face-img{object-fit:contain}
+.e6-face-tag{font-size:18px}
+.e6-face-anat-label text{font-size:82px}
+.e6-journey-bolus{r:30;filter:drop-shadow(0 0 16px #ffd84f)}
+.e6-journey-bolus{animation:e6-bolus-pulse .9s ease-in-out infinite alternate}
+.e6-face-residue circle{r:28}
+.e6-term{font-size:21px}
+.e6-def b,.e6-def span{font-size:20px}
+.e6-summary{font-size:20px}
+@keyframes e6-bolus-pulse{from{opacity:.78;transform:scale(.9);transform-origin:center}to{opacity:1;transform:scale(1.1);transform-origin:center}}
+
+/* Stage-synced biomechanics cues: oral tongue propulsion and pharyngeal airway protection. */
+.e6-food-route{stroke-dasharray:24 19;animation:e6-route-flow .85s linear infinite;opacity:.9}
+.e6-journey-bolus{r:32;animation:e6-bolus-pulse .72s ease-in-out infinite alternate;filter:drop-shadow(0 0 14px #ffc94d)}
+.e6-move-cue{opacity:0;pointer-events:none}
+.e6-face-scene.e6-stage-1 .e6-tongue-cue,.e6-face-scene.e6-stage-2 .e6-protect-cue{opacity:1}
+.e6-cue-arrow{fill:none;stroke:#FFE27A;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:17 12;filter:drop-shadow(0 0 10px #ffbf35);marker-end:url(#e6-face-arrow)}
+.e6-tongue-arrow{animation:e6-tongue-push 1.15s ease-in-out infinite}
+.e6-elevate-arrow{stroke:#4BF0C0;animation:e6-larynx-lift 1s ease-in-out infinite alternate}
+.e6-epiglottis-arrow{stroke:#70D7FF;animation:e6-epiglottis-flip 1s ease-in-out infinite alternate}
+.e6-move-cue rect{fill:#08152BF2;stroke:#FFD966;stroke-width:4;filter:drop-shadow(0 5px 12px #020716)}
+.e6-move-cue text{font:900 72px sans-serif;fill:#FFF8DE;paint-order:stroke;stroke:#08152B;stroke-width:5px}
+.e6-protect-cue rect{stroke:#5BE7C1}.e6-protect-cue text{fill:#D9FFF2}
+@keyframes e6-tongue-push{0%,100%{stroke-dashoffset:34;transform:translateX(-8px)}50%{stroke-dashoffset:0;transform:translateX(7px)}}
+@keyframes e6-larynx-lift{from{transform:translateY(12px);opacity:.7}to{transform:translateY(-14px);opacity:1}}
+@keyframes e6-epiglottis-flip{from{transform:rotate(-7deg);transform-origin:1080px 610px}to{transform:rotate(12deg);transform-origin:1080px 610px}}
+
+/* EP6 readable, content-led cards: large text pane; illustration occupies only the right third */
+.e6-flow-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:22px 0 18px}
+.e6-flow-grid>div,.e6-assess-grid>div{min-height:142px;padding:18px 20px;border-radius:16px;background:linear-gradient(145deg,rgba(127,178,255,.14),rgba(255,255,255,.045));border:1px solid rgba(160,190,255,.24);display:flex;flex-direction:column;justify-content:center;gap:9px;transition:background .35s,border-color .35s,box-shadow .35s}
+.e6-flow-grid i{font-style:normal;color:#8ea9d7;font-size:19px;font-weight:900;letter-spacing:.08em}
+.e6-flow-grid b,.e6-assess-grid b{font-size:24px;color:#ffe27a;line-height:1.3}
+.e6-flow-grid span,.e6-assess-grid span{font-size:21px;color:#e4ebfa;line-height:1.45}
+.e6-step-note{margin-top:16px;padding:14px 18px;border-left:5px solid #7fb2ff;border-radius:10px;background:rgba(127,178,255,.1);color:#e7efff;font-size:21px;line-height:1.45}
+.e6-assess-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}
+.e6-open-close{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:24px 0}
+.e6-open-close>.hlx{min-height:190px;padding:22px;border-radius:16px;background:linear-gradient(145deg,rgba(127,178,255,.14),rgba(255,255,255,.045));border:1px solid rgba(160,190,255,.24);display:flex;flex-direction:column;justify-content:center;gap:10px}
+.e6-open-close b{font-size:27px;color:#ffe27a}.e6-open-close span{font-size:20px;color:#e4ebfa;line-height:1.4}.e6-open-close i{font-style:normal;color:#75d8c0;font-size:24px;font-weight:900;text-align:center}
+.e6-open-close-arrow{font-size:18px;font-weight:900;color:#65c7ff;writing-mode:vertical-rl}
+.e6-assess-grid>div{min-height:165px}
+
+/* r4: one readable type scale for every EP6 card (old raw cards included) */
+.e6-status{display:none!important}
+#e6-cards>b,#e6-cards>.e6-minihead,#e6-cards .e6-terms-title{display:block;font-size:34px;line-height:1.3;color:#fff;margin:0 0 16px;font-weight:900}
+#e6-cards>b.e6-danger{color:#ff8d9c}
+#e6-cards>p{font-size:27px;line-height:1.5;color:#f2f5ff;margin:10px 0}
+#e6-cards>small{display:block;font-size:22px;line-height:1.5;color:#c3d0e8;margin-top:14px}
+#e6-cards .e6-transition{padding:20px 14px;margin:18px 0}
+#e6-cards .e6-transition>span{font-size:27px}
+#e6-cards .e6-transition small{font-size:19px;max-width:220px;line-height:1.35}
+#e6-cards .e6-transition i{font-size:28px}
+#e6-cards .e6-def{display:inline-grid;min-width:46%;padding:14px 18px;margin:8px 14px 0 0}
+#e6-cards .e6-def b{font-size:25px}#e6-cards .e6-def span{font-size:21px;line-height:1.45}
+#e6-cards .e6-residue-list span,#e6-cards .e6-residue-list b{font-size:23px}
+#e6-cards .e6-cn b,#e6-cards .e6-cn span{font-size:23px}
+#e6-cards .e6-select b{font-size:23px}#e6-cards .e6-select span{font-size:21px}
+#e6-cards .e6-two strong{font-size:25px}#e6-cards .e6-two p{font-size:21px;line-height:1.45}
+#e6-cards .e6-summary{font-size:22px;gap:10px 30px}
+.e6-anatomy-mode #e6-cards .e6-transition>span{font-size:23px}
+.e6-anatomy-mode #e6-cards .e6-transition small{font-size:16px;max-width:150px}
+.e6-open-close{grid-template-columns:1fr 1fr;gap:18px}
+.e6-open-close-arrow{display:none}
+
+/* r4b: face cutaway gets a real share of the screen; text pane uses stacked rows */
+.e6-anatomy-mode .e6-side{right:calc(42% + 20px)}
+.e6-anatomy-mode .e6-anat{width:42%;display:flex!important;flex-direction:column;justify-content:center}
+.e6-anatomy-mode .e6-face-scene{height:372px}
+.e6-anatomy-mode .e6-anat-head{font-size:20px}
+.e6-anatomy-mode .e6-flow-grid{grid-template-columns:1fr;gap:10px;margin:16px 0 12px}
+.e6-anatomy-mode .e6-flow-grid>div{min-height:0;display:grid;grid-template-columns:44px 230px 1fr;align-items:center;padding:12px 16px;gap:10px}
+.e6-anatomy-mode .e6-flow-grid b{font-size:23px}.e6-anatomy-mode .e6-flow-grid span{font-size:20px}
+.e6-anatomy-mode .e6-panel h3{font-size:30px}
+.e6-anatomy-mode .e6-step-note{font-size:19px}
+.e6-oc,.e6-open-close>.e6oc{min-height:170px;padding:22px;border-radius:16px;background:linear-gradient(145deg,rgba(127,178,255,.14),rgba(255,255,255,.045));border:1px solid rgba(160,190,255,.24);display:flex;flex-direction:column;justify-content:center;gap:8px}
+.e6-anatomy-mode .e6-open-close{grid-template-columns:1fr}
+.e6-anatomy-mode .e6-open-close>.e6oc{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:14px 18px}
+.e6-anatomy-mode .e6-open-close b{font-size:24px;width:100%}
+
+/* r5: animated sagittal swallow replaces the static face picture in stage scenes */
+.e6-face-hold{display:none!important}
+.e6-anatomy-mode .e6-anat{justify-content:flex-start!important;padding:14px 14px 10px}
+.e6-sw{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;align-items:center}
+.e6-sw .sw-svg{flex:1;min-height:0;width:100%;height:100%}
+.sw-skin{fill:url(#swSkin);opacity:.62;stroke:#f2c3ab;stroke-width:3}
+.sw-nasal{fill:#2b1d33;opacity:.9}
+.sw-cav{fill:#241322}
+.sw-wall{fill:url(#swMus);stroke:#f3a2ac;stroke-width:1.5}
+.sw-esowall{fill:url(#swMus);opacity:.95}
+.sw-esolum{fill:#241322}
+.sw-sph{fill:#ff6f86;stroke:#ffd1d8;stroke-width:2}
+.sw-dia{stroke:#9fb3d8;stroke-width:2;stroke-dasharray:7 6;opacity:.7}
+.sw-stom{fill:url(#swMus);opacity:.9}
+.sw-air{fill:#173252;stroke:#7fb7ff;stroke-width:2.5}
+.sw-ring{fill:none;stroke:#cfe3ff;stroke-width:3;opacity:.55}
+.sw-vf{stroke:#fff;stroke-width:5;stroke-linecap:round}
+.sw-bone{fill:#efe2c6;stroke:#c9b48e;stroke-width:1.5}
+.sw-cart{fill:none;stroke:#cfe3ff;stroke-width:5;stroke-linecap:round;opacity:.8}
+.sw-velum{fill:none;stroke:url(#swMus);stroke-width:17;stroke-linecap:round}
+.sw-tooth{fill:#fbf8f0;stroke:#c9c1ad;stroke-width:1}
+.sw-lip{fill:#d9707f}
+.sw-tongue{fill:url(#swTongue);stroke:#ffb3bd;stroke-width:2}
+.sw-epi{fill:#ffd166;stroke:#fff1c2;stroke-width:2}
+.sw-bolus{fill:url(#swFood);stroke:#fff3b0;stroke-width:2.5;filter:url(#swGlow)}
+.sw-small{font:700 15px sans-serif;fill:#9fb3d8}
+.sw-lbl rect{fill:#0b1730e8;stroke:#7f9fd0;stroke-width:2}
+.sw-lbl .sw-lead{stroke:#9fbbe8;stroke-width:2;opacity:.75}
+.sw-lbl .sw-lt{font:900 27px sans-serif;fill:#eef4ff}
+.sw-lbl .sw-ls{font:700 16px sans-serif;fill:#b8c8e6}
+.sw-lbl.hot rect{fill:#3b2f0bf2;stroke:#ffd966;stroke-width:3}
+.sw-lbl.hot .sw-lt{fill:#ffe27a}
+.sw-lbl.hot .sw-lead{stroke:#ffd966;opacity:1;stroke-width:3}
+.sw-cap{width:100%;margin-top:6px;padding:10px 14px;border-radius:12px;background:rgba(10,18,40,.92);border:1px solid #ffd96680;display:flex;gap:12px;align-items:center;min-height:48px}
+.sw-cap b{flex:none;padding:4px 10px;border-radius:8px;background:#ffd966;color:#1b1503;font-size:17px}
+.sw-cap span{font-size:19px;font-weight:800;color:#fff;line-height:1.3}
+.sw-cap.pop{animation:swPop .35s ease}
+@keyframes swPop{from{transform:translateY(5px);opacity:.3}to{transform:none;opacity:1}}
+
+/* audit C */
+.sw-res ellipse{fill:#ffcb4f;stroke:#fff3b0;stroke-width:2;filter:url(#swGlow)}
+.sw-res{transition:opacity .2s}
+.e6-quizprev{grid-template-columns:1fr 1fr!important}
+.e6-quizprev>div{min-height:120px!important}
+
+.e6-layout.e6-anatomy-mode{height:505px!important}
+.e6-anatomy-mode .e6-sw{flex-direction:column-reverse}
+.e6-anatomy-mode .sw-cap{margin:0 0 6px}
+
+
+/* v2: 카드 문단 여백 · 강조 상자에서 글자가 테두리에 붙지 않도록 */
+#e6-cards p{padding:10px 16px;border-radius:12px;margin:0 0 10px}
+#e6-cards p strong{color:#FFD25E;margin-right:10px}
+#e6-cards .e6-sub{color:#C9D6F2;font-size:.86em}
